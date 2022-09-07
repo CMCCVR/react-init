@@ -14,17 +14,17 @@ export default function App() {
 
   return (
     <div>
+
+      <BookList />
+
       <FormBook />
       <h1>Livros</h1>
 
-      {
-        livros.map(element => {
-          console.log(element.title)
-          return <Book key={element.id} title={element.title} />
-        })
-      }
+      <div>
+        {livros.map(i => <Book Key={i.id} id={i.id} title={i.title} />)}
+      </div>
+
     </div>
-  )
-};
 
-
+  );
+}
